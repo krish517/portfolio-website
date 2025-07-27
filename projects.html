@@ -1,0 +1,252 @@
+   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishna Gupta</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        section {
+      padding: 80px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+    
+
+    .details-button {
+      color: #2169e4;
+      background: none;
+      border: none;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0;
+    }
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .image-grid figure {
+      flex: 0 0 30%; /* ~2 per row */
+      text-align: center;
+      margin: 0;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .image-grid figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+  </style>
+
+  
+</head>
+<script>
+    function toggleDetails(button) {
+      const detailDiv = button.parentElement.nextElementSibling;
+      const isVisible = detailDiv.style.display === "block";
+      detailDiv.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "Details" : "Hide Details";
+    }
+  </script>
+<body>
+    <header>
+          <nav>
+            <h1><a href="main.html">Krishna Gupta</a></h1>
+            <ul>
+                <li><a href="main.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="training-certifications.html">Training & Certifications</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="main.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <img src="assets/TU logo.png" alt="TU logo" style="height: 30px;" />
+  <h3>Design and Fabrication Acoustic Metamaterial for Noise Reduction</h3>
+  <p>
+    <button class="details-button" onclick="toggleDetails(this)">Details</button> |
+    COMSOL | Final Year Project
+  </p>
+  <div class="project-details">
+    <p>
+I remember we were contemplating finding a problem to solve with an engineering solution for our final year project. We noticed that the grass cutter was very noisy around the campus, especially when I needed natural ventilation and the machine was operating outside. So, we decided to address this issue as our final year project.
+
+While researching online, we came across a recent innovation in noise reduction—acoustic metamaterials. This technology can be described as a method to cancel or reduce sound without blocking ventilation, based on fundamental wave physics.
+
+The project involved data collection, design, creating a parametric CAD model, performing pressure acoustics simulations in COMSOL Multiphysics, parametric optimization, experimental setup development, 3D printing of the optimized model, and testing the acoustic metamaterial (AMM) prototypes. This project was supported by <a href="https://doenv.gov.np/">Department of Environment, Ministry of Forest and Environment, Government of Nepal</a>.
+    </p>
+    <p>Here is the brief pictorial representation of our project.</p>
+    <figure style="text-align: center;">
+    <img src="Photos/meta-metho.png" alt="Acoustic Metamaterial Methodology" style="max-width:85%; border:1px solid #ccc; margin-top:1rem;" />
+    <img src="Photos/design3-3d1(1).png"  style="max-width:30%; border:1px solid #ccc; margin-top:1rem;" />
+    <img src="Photos/design3-3d2(1).png"  style="max-width:30%; border:1px solid #ccc; margin-top:1rem;" />
+    <img src="Photos/design3-mess(1).png"  style="max-width:30%; border:1px solid #ccc; margin-top:1rem;" />
+    <img src="Photos/design1-spl(1).png" alt="Sound Transmission loss contour" style="max-width:30%; border:1px solid #ccc; margin-top:1rem;" />
+    <img src="Photos/design3-spl1(1).png"  style="max-width:30%; border:1px solid #ccc; margin-top:1rem;" />
+<!  <img src="Photos/result.png"  style="max-width:38%; border:1px solid #ccc; margin-top:1rem;" /> >
+    </figure>
+     <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem; flex-wrap: wrap;">
+      <img src="Photos/meta-window.png" alt="Window Model" style="max-width: 20%; border:1px solid #ccc;" />
+      <div style="flex: 1; min-width: 200px;">
+        <p>We successfully achieved sound attenuation of up to 18 dB from a grass cutter while maintaining a 52.7% openness ratio. This technology holds significant potential for future applications. Acoustic metamaterial (AMM) panels can be used as sound-reducing windows, and they can also be employed to enclose noisy industrial machines, such as motors, to minimize noise pollution. </p>
+      </div>
+    </div>
+     
+
+  </div>
+</div>
+
+    <div class="project">
+      <img src="assets/TU logo.png" alt="TU logo" style="height: 30px;" />
+      <h3>CFD Analysis of Cavitation in Centrifugal Pump</h3>
+      <p><button class="details-button" onclick="toggleDetails(this)">Details</button> | Ansys CFX | SolidWorks</p>
+      <div class="project-details">
+      <p>Cavitation is a tricky problem in the way fluids flow, especially in machines called
+      centrifugal pumps. It can cause harmful effects on how these pumps work and their
+      physical parts. This study used computer simulations to understand cavitation better in
+      these pumps. We looked closely at how cavitation forms inside the pump, and how it affects
+      things like how the fluid moves, where pressures change, and how well the pump works.
+      By studying how fluid moves and cavitation happens, we learned how it makes pumps less
+      efficient and reliable. This helps us figure out ways to make pumps work better and last
+      longer.Through meticulous simulations, we revealed a consistent trend: cavitation increases with an increase in RPM, mass flow rate, and suction pressure. </p>
+      <p>Please find the <a href="docs/Cavitation_in_centrifugal_pump_077bme_krishna_bishnu_sanjiv_bipin.pdf">project report</a> for more details.</p>
+    <div class="image-grid">
+      <figure>
+        <img src="Photos/impeller CAD.png" alt="Impeller CAD model">
+        <figcaption>CAD model of centrifugal pump impeller</figcaption>
+      </figure>
+      <figure>
+        <img src="Photos/impeller mesh.png" alt="Meshing of CAD model">
+        <figcaption>Meshing of CAD model</figcaption>
+      </figure>
+      <figure>
+        <img src="Photos/streamline.png" alt="Velocity streamline of water flow.">
+        <figcaption>Velocity streamline of water flow</figcaption>
+      </figure>
+      <figure>
+        <img src="Photos/volfrac-3000rpm.png" alt="Vapour fraction at 3000 rpm">
+        <figcaption>Vapour fraction at 3000 rpm</figcaption>
+      </figure>
+    </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="assets/samsung.png" alt="Samsung Logo" style="height: 40px;" />
+      <h3>Voice Biometric Authentication using Python</h3>
+      <p><button class="details-button" onclick="toggleDetails(this)">Details</button> | Hackathon Project | ML & Sound Analysis</p>
+      <div class="project-details">
+      <p> This project focuses on developing a Voice biometric authentication system using Python, aiming to provide a secure, contactless, and user-friendly alternative to traditional authentication methods like passwords and PINs.
+        Leveraging the unique vocal characteristics of individuals, the system captures and analyzes voice samples using techniques such as **Mel-Frequency Cepstral Coefficients (MFCCs) and
+        **machine learning models like Deep Neural Networks (DNNs) for accurate speaker recognition. The project addresses key challenges such as background noise, voice variability, and 
+        real-time usability by applying robust preprocessing, model training, and validation techniques. We were able to obtain more than 80% accuracy in recognizing the speakers in record. In this project,
+         we used the knowledge of python learned at Intensive Python Programming Workshop which was organised by Samsung under the program Samsung Innovation Campus(SIC). We also used chatgpt to learn the concept of different sound analysis and machine learning 
+         libraries like librosa and scikit for this project. 
+        </p>
+      <p>Please find the attached <a href="docs/Voice Biometric Authentication using Python.pptx">slides</a> for detailed information.</p>
+  <figure style="text-align: center;">
+  <img src="videos/voice-bio-animation.gif" alt="Voice Biometric Animation" style="max-width:50%; height:auto;">
+  <figcaption>Voice Biometric Authentication System</figcaption>
+</figure>
+
+<!-- Centered Video -->
+<figure style="text-align: center;">
+  <video controls style="max-width:80%; height:auto;">
+    <source src="videos/test video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>The testing video shows two person, one is authorized person who is in record and another is not in record (unathorized person).</figcaption>
+</figure>
+    </div>
+    </div>
+
+    <div class="project">
+      <img src="assets/adb.png" alt="adb logo" style="height: 30px;" />
+      <img src="assets/jfpr logo.jpg" alt="jfpr logo" style="height: 30px;" />
+      <h3>Assistive Devices</h3>
+      <p><button class="details-button" onclick="toggleDetails(this)">Details</button> | ADB Makeathon | Gripper Cane</p>
+      <div class="project-details">
+        This makeathon was co-organized by the Asian Development Bank (ADB), Japan Fund for Prosperous and Resilient Asia and the Pacific (JFPR),
+        and Impact Hub Kathmandu. The event focused on designing assistive devices for individuals with disabilities through direct interviews to 
+        understand their specific needs. Our team engaged with a need-knower living with a spinal cord injury, learned about her challenges, and identified 
+        key issues she faced in daily life. We designed and prototyped a gripper cane and proposed a cost-effective solution 
+        to help her safely ascend a highly steep ramp — a major difficulty in her environment.
+        <figure style="text-align: left;">
+        <img src="Photos/makeathon-1.jpg" alt="Interviewing the need knower" style="max-width:100%; height:auto;">
+        <figcaption>Our team interacting with the need knower to identify <br> her need of assistive devices</figcaption>
+        </figure>
+  </div>
+  </div>
+  <div class="project">
+    <h3>CAD Works</h3>
+    <p><button class="details-button" onclick="toggleDetails(this)">Details</button> | SolidWorks| 3D Model</p>
+    <div class="project-details">
+      <p>Here is the collection of some of my CAD model during learning phase of SolidWorks.</p>
+      <img src="Photos/4cylinder render.JPG" style="max-width:40%; height:auto;"/>
+
+      <video controls style="max-width:50%; height:auto;">
+    <source src="videos/4 cylinder motion.mp4" type="video/mp4">
+  </video>
+
+    <img src="Photos/doornub1.JPG" style="max-width:40%; height:auto;"/>
+    <img src="Photos/doornub2.JPG" style="max-width:40%; height:auto;"/>
+
+    <video controls style="max-width:50%; height:auto;">
+    <source src="videos/nut-bolt.mp4" type="video/mp4">
+  </video>
+
+    </div>
+  </div>
+  <div class="project">
+    <h3>Development of Portfolio website</h3>
+    <p><button class="details-button" onclick="toggleDetails(this)">Details</button> | HTML | CSS</p>
+    <div class="project-details">
+    I developed this website greatly with the help of chatgpt. This is the first website I developed with the zero knowledge of HTML and CSS at the beginning.
+    
+
+    </div>
+  </div>
+  </section>
+  <footer>
+        <p>&copy; 2025 Krishna Gupta. All rights reserved.</p>
+    </footer>
+  
+</body>
